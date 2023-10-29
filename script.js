@@ -10,6 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("click", function(event) {
+    const checkbox = document.getElementById("menu-toggle");
+
+    // Check if the click event occurred outside of the checkbox and its container
+    if (event.target !== checkbox && !checkbox.contains(event.target)) {
+        checkbox.checked = false; // Uncheck the checkbox
+    }
+});
+
 
 document.getElementById("scrollToTop").addEventListener("click", function () {
     window.scrollTo({
