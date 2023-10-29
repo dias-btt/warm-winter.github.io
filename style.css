@@ -533,7 +533,7 @@ button:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 50vh;
+        height: 60vh;
     }
 
     .main-text {
@@ -560,34 +560,35 @@ button:hover {
 
     /* Цифры */
     .container {
-        height: auto;
-        flex-direction: column;
+        height: 70vh;
     }
 
     .stats {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 15px;
     }
 
     .kids-num {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .kids-text {
         font-size: 18px;
-        width: 250px;
+        width: 300px;
+        line-height: 20px;
     }
 
     .text-above {
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         font-size: 30px;
     }
 
     /* Шаги */
     .steps-container {
         height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 20px;
     }
 
     .text-above-steps {
@@ -597,6 +598,7 @@ button:hover {
     }
 
     .step{
+        flex-direction: column;
         margin: 10px;
     }
 
