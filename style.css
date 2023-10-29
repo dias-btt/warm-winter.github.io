@@ -560,7 +560,7 @@ button:hover {
 
     /* Цифры */
     .container {
-        height: 70vh;
+        height: 75vh;
     }
 
     .stats {
@@ -597,8 +597,11 @@ button:hover {
         font-size: 24px;
     }
 
+    .steps{
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+    }
     .step{
-        flex-direction: column;
         margin: 10px;
     }
 
