@@ -268,7 +268,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 65vh;
     background-color: #145980;
 }
 
@@ -277,7 +277,7 @@ button:hover {
     grid-template-columns: repeat(3, 1fr); /* Create three equally sized columns */
     width: 100%;
     background-color: #145980;
-    height: 80vh;
+    height: 50vh;
     align-items: center; /* Vertically center items in the container */
     justify-items: center;
 }
