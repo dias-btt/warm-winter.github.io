@@ -1,0 +1,643 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Source Serif Pro;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Source Serif Pro;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+hr {
+    border: none; /* Remove the default border */
+    border-top: 0.2px solid #fff; /* Set the color and thickness */
+    width: 100%; /* Set the width as a percentage or any other value */
+    background-color: #145980;
+  }
+  
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.scroll-to-top a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    color: #145980;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top a:hover {
+    background-color: #03213F;
+    transform: scale(1.1);
+}
+
+/* Home */
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background.jpeg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    transition: 0.3s;
+}
+
+.header img{
+    margin-top: 20px;
+    display: block;
+}
+
+/* navbar */
+.navbar{
+    margin-top: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu li a{
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #145980;
+    border-radius: 20px;
+}
+
+.menu li a:hover {
+    background-color: #03213F; /* Change the background color on hover */
+    transition: 0.5s;
+}
+
+.hamburger{
+    margin-right: 20px;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: #145980;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.hamburger::before, .hamburger::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: #145980;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger::before{
+    top: -10px;
+    width: 20px;
+}
+
+.hamburger::after{
+    top: 10px;
+    width: 25px;
+}
+
+.toggle-menu{
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger,
+.toggle-menu{
+    display: none;
+}
+
+.navbar input:checked ~ .hamburger{
+    background: transparent;
+}
+
+.navbar input:checked ~ .hamburger::before{
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+
+.navbar input:checked ~ .hamburger::after{
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+}
+
+/* Home */
+.content{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #03213F;
+}
+
+.content img {
+    margin-bottom: -60px; /* Adjust the value as needed to reduce space */
+}
+
+.content h1{
+    font-family: Ribeye;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+button{
+    width: 200px;
+    border: none;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 22px;
+    font-family: Source Serif Pro;
+    background-color: #03213F;
+    color: #fff;
+    margin: 180px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e85b4; /* Change the background color on hover */
+}
+
+/* Project */
+.main{
+    display: flex;
+    width: 100%;
+    background-color: #145980;
+    height: 80vh;
+}
+
+.main-text{
+    color: #fff;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Source Serif Pro;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 90.909% */
+    margin: 60px 60px;
+}
+
+.main-image{
+    width: 100%; /* Take up the full width of the container */
+    height: auto; /* Automatically adjust the height */
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.date-container{
+    display: flex;
+    align-items: center;
+}
+
+.date-icon{
+    margin: 0 60px 0 60px;
+}
+
+.date-text{
+    margin: 20px 0;
+    color: #fff;
+    font-family: Source Serif Pro;
+    font-size: 34px;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.main-image img{
+    border-radius: 15px;
+}
+
+
+/* Stats */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: #145980;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three equally sized columns */
+    width: 100%;
+    background-color: #145980;
+    height: 80vh;
+    align-items: center; /* Vertically center items in the container */
+    justify-items: center;
+}
+
+.kids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.kids-num {
+    color: #E89727;
+    font-family: Source Serif Pro;
+    font-size: 58px;
+    font-weight: 700;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.kids-text {
+    width: 330px;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Source Serif Pro;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.text-above {
+    margin-top: 40px;
+    color: #fff; /* Color for the text above */
+    font-family: Source Serif Pro;
+    font-size: 44px; /* Adjust the font size as needed */
+}
+
+
+/* Steps */
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: #145980;
+}
+
+.text-above-steps {
+    margin-bottom: 20px;
+    color: #fff; /* Color for the text above */
+    font-family: Source Serif Pro;
+    font-size: 44px; /* Adjust the font size as needed */
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    background-color: #145980;
+}
+
+.step {
+    margin: 20px;
+    text-align: center;
+}
+
+.step-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #E89727;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 42px;
+    line-height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.step-circle:hover {
+    background-color: #3498db; /* Change the background color on hover */
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-text {
+    margin-top: 10px;
+    font-size: 16px;
+    align-items: center;
+    color: #fff;
+}
+
+.button-steps {
+    text-align: center;
+    border: none;
+    display: inline-block; 
+    margin: 20px auto; 
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #E89727;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: background-color 0.3s;
+    width: 250px;
+}
+/* faq */
+
+.faq-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #145980;
+}
+
+.faq-container h1{
+    color: #E89727;
+    font-size: 34px;
+    align-items: center;
+}
+
+.faq-item {
+    max-width: 800px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.answer {
+    margin-top: 5px;
+    display: none;
+    font-size: 18px;
+}
+
+/* Contacts *\
+/* Contact Section */
+.contact-section {
+    background-color: #145980;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  
+  .contact-links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .contact-links a:hover {
+    color: #E89727; /* Change to your preferred hover color */
+  }
+  
+
+  .navbar input:checked ~ .menu{
+    right: 0;
+  }
+  /* Mobile version *\
+  /* Add this CSS at the end of your existing styles */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+
+    /* Меню */
+    .hamburger,
+    .toggle-menu{
+        display: block;
+    }
+
+    .menu{
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        background: #fff;
+        width: 200px;
+        height: 100%;
+        padding-top: 65px;
+    }
+
+    .menu li{
+        margin: 20px 15px;
+    }
+
+    .menu li a{
+        margin-bottom: 5px;
+        padding: 8px 20px;
+        text-decoration: none;
+        color: #145980;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    
+    .menu li a:hover {
+        color: #fff;
+        background-color: #145980; /* Change the background color on hover */
+        transition: 0.5s;
+    }
+    
+    .menu li a{
+        margin-bottom: 5px;
+    }
+
+    /* Главная */
+    .content {
+        margin-top: 100px;
+    }
+
+    .content img {
+        margin-bottom: -40px;
+        width: 150px;
+        height: 130px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    button {
+        margin: 100px;
+        width: 150px;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    /* О проекте */
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50vh;
+    }
+
+    .main-text {
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .main-image img {
+        display: none;
+    }
+
+    .date-container {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .date-icon {
+        margin: 10px 0;
+    }
+
+    .date-text {
+        font-size: 24px;
+    }
+
+    /* Цифры */
+    .container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .kids-num {
+        font-size: 40px;
+    }
+
+    .kids-text {
+        font-size: 18px;
+        width: 250px;
+    }
+
+    .text-above {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    /* Шаги */
+    .steps-container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-above-steps {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .step{
+        margin: 10px;
+    }
+
+    .step-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 32px;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    .step-text {
+        font-size: 14px;
+    }
+
+    .button-steps {
+        font-size: 16px;
+        width: 200px;
+    }
+
+    /* FAQ */
+    .faq-container h1 {
+        font-size: 24px;
+    }
+
+    .faq-item {
+        margin-top: 10px;
+        padding: 5px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+    .answer {
+        font-size: 16px;
+    }
+
+    .contact-links a {
+        font-size: 20px;
+    }
+}
